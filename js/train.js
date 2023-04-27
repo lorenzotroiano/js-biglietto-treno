@@ -39,9 +39,9 @@ console.log(userEta);
      console.log(prezzoSconto);
      console.log(prezzoFinale);
     
-
+    messaggio = "Il biglietto ti viene a costare $";
     
-    document.getElementById("train").innerHTML = "Il biglietto ti viene a costare $" + " " + prezzoFinale.toFixed(2);
+    document.getElementById("train").innerHTML = messaggio + " " + prezzoFinale.toFixed(2);
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
 
 
