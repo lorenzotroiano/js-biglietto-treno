@@ -19,14 +19,17 @@ console.log(userEta);
     if (userEta <= 17) {
          //  sconto del 20% per i minorenni
          numSconto = 20;
+         document.bgColor="yellow";
     }
      else if (userEta >= 65) {
          //  sconto del 40% per over 65
         numSconto = 40;
+        document.bgColor="red";
      }
      else {
         // prezzo normale
         numSconto = 0;
+        document.bgColor="violet";
      }
     
 
@@ -41,6 +44,9 @@ console.log(userEta);
     
     messaggio = "Il biglietto ti viene a costare $";
     
+
+   
+
     document.getElementById("train").innerHTML = messaggio + " " + prezzoFinale.toFixed(2);
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
 
