@@ -1,5 +1,5 @@
 // generali
-let messaggio, numSconto1, numSconto2, prezzoSconto1, prezzoSconto2, nDecimali1, nDecimali2;
+let messaggio, numSconto;
 
 // Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere
 let numKm = parseInt(prompt("Quanti km vuoi percorrere?"));
@@ -17,37 +17,31 @@ console.log(userEta);
     
     
     if (userEta <= 17) {
-        numSconto1 = prezzoTicket * 20 / 100;
-        prezzoSconto1 = prezzoTicket - numSconto1;
-        nDecimali1 = prezzoSconto1.toFixed(2);
+         //  sconto del 20% per i minorenni
+         numSconto = 20;
     }
      else if (userEta >= 65) {
-        numSconto2 = prezzoTicket * 40 / 100;
-        prezzoSconto2 = prezzoTicket - numSconto2;
-        nDecimali2 = prezzoSconto2.toFixed(2);
+         //  sconto del 40% per over 65
+        numSconto = 40;
      }
-    //  sconto del 20% per i minorenni
-    //  sconto del 40% per over 65
+     else {
+        // prezzo normale
+        numSconto = 0;
+     }
+    
 
+    console.log(numSconto);
+    
 
-
-    console.log(numSconto1);
-    console.log(numSconto2);
-    console.log(prezzoSconto1);
-    console.log(prezzoSconto2);
-
-    console.log(nDecimali1);
-
-    console.log(nDecimali2);
-     
-    //  nDecimali1 = prezzoSconto1.toFixed(2);
-    //  console.log(nDecimali1);
-
-    //  nDecimali2 = prezzoSconto2.toFixed(2);
-    //  console.log(nDecimali2);
+    prezzoSconto = prezzoTicket * numSconto / 100;
+    prezzoFinale = prezzoTicket - prezzoSconto;
+    
+     console.log(prezzoSconto);
+     console.log(prezzoFinale);
+    
 
     
-    document.getElementById("train").innerHTML = "ciaoooo";
+    document.getElementById("train").innerHTML = prezzoFinale.toFixed(2);
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
 
 
