@@ -19,9 +19,12 @@ console.log(userEta);
     if (userEta <= 17) {
          //  sconto del 20% per i minorenni
          numSconto = 20;
-         document.bgColor="yellow";
+         
+        //  per inserire colore bground
+         document.body.style.backgroundColor="yellow";
 
 
+        //  per inserire una img
          let img = document.createElement("img");
         img.src = "https://www.fondazioneveronesi.it/uploads/2020/10/26/dieta-dentizione-svezzamento.jpg";
         let src = document.getElementById("x");
@@ -30,7 +33,7 @@ console.log(userEta);
      else if (userEta >= 65) {
          //  sconto del 40% per over 65
         numSconto = 40;
-        document.bgColor="red";
+        document.body.style.backgroundColor="red";
 
 
         let img = document.createElement("img");
@@ -41,7 +44,7 @@ console.log(userEta);
      else {
         // prezzo normale
         numSconto = 0;
-        document.bgColor="violet";
+        document.body.style.backgroundColor="violet";
 
 
 
